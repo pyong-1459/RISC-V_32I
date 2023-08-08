@@ -15,7 +15,7 @@ assign sresult = |sbitCompare;
 
 assign Less = ~(uMod ? uresult : sresult);
 
-assign SignCompare = (A[31] == B[31]) ? 1'b0 : ((A[31]) ? 1'b0 : 1'b10);
+assign SignCompare = (A[31] == B[31]) ? 1'b0 : ((A[31]) ? 1'b0 : 1'b1);
 assign ubitCompare[31] = (A[31] == B[31]) ? 1'b0 : ((A[31]) ? 1'b1 : 1'b0);      // Less=0, GE=1
 assign ubitCompare[30] = (A[30] == B[30]) ? 1'b0 : ((A[30]) ? 1'b1 : 1'b0);      // Less=0, GE=1
 assign ubitCompare[29] = (A[29] == B[29]) ? 1'b0 : ((A[29]) ? 1'b1 : 1'b0);      // Less=0, GE=1
